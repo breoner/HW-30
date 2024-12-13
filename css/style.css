@@ -1,0 +1,51 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation: moveSquare 8s infinite;
+}
+
+@keyframes moveSquare {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+    25% {
+        top: 300px; /* Движение вниз */
+        left: 0;
+        background-color: blue;
+    }
+    50% {
+        top: 300px;
+        left: 300px; /* Движение вправо */
+        background-color: green;
+    }
+    75% {
+        top: 0; /* Движение вверх */
+        left: 300px;
+        background-color: yellow;
+    }
+    100% {
+        top: 0;
+        left: 0; /* Возвращение в исходную точку */
+        background-color: red;
+    }
+}
